@@ -1,0 +1,43 @@
+<HTML>
+<body class="bg-gray-90000 text-white font-sans">
+    <div id="loader" class="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-white z-50" style="display: none;">
+    <div class="animate-spin rounded-full h-32 w-32"></div>
+    </div>
+    
+    <main class="max-w-6xl mx-auto mt-10 px-4">
+    <h2 class="text-3xl mb-4">About Blank</h2>
+    <input type="text" id="url-target" placeholder="Enter URL here..." class="shadow appearance-none border rounded-xl w-full py-2 px-3 text-gray-700leading-tight focus:outline-none focus:shadow-outline">
+    <div class="button-wrapper mt-4">
+    <button id="create" class="console-button bg-blue-500 hover:bg-blue-700 transition duration-300 text-white py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline"><i class="fas fa-plus-circle"></i> Create page</button>
+    <button class="console-button bg-red-500 hover:bg-red-700 transition duration-300 text-white py-2 px-4 rounded-xl ml-4 focus:outline-none focus:shadow-outline" onclick="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('url-target').value = ''">
+    <i class="fas fa-trash"></i> Clear input
+    </button>
+    </div>
+    </main>
+    <script type="text/javascript">
+          var url = document.getElementById("url-target");
+          var urlObj = new window.URL(window.location.href);
+          document.getElementById("create").onclick = function () {
+            if (url.value.substring(0, 8) !== "https://" && url.value.substring(0, 7) !== "http://") {
+              url.value = "https://" + url.value.split("https://").pop();
+            } else if (url.value.substring(0, 7) == "http://") {
+              url.value = "https://" + url.value.split("http://").pop();
+            }
+            win = window.open();
+            win.document.body.style.margin = "0";
+            win.document.body.style.height = "100vh";
+            var frm = win.document.createElement("iframe");
+            frm.style.border = "none";
+            frm.style.width = "100%";
+            frm.style.height = "100%";
+            frm.style.margin = "0";
+            frm.referrerpolicy = "no-referrer";
+            frm.allow = "fullscreen";
+            frm.src = url.value;
+            win.document.body.appendChild(frm);
+          };
+        </script>
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;4aa5236f3a694162b52af0144846577c&quot;}" type="text/javascript"></script><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon="{&quot;rayId&quot;:&quot;854a426bbd713137&quot;,&quot;r&quot;:1,&quot;version&quot;:&quot;2024.2.0&quot;,&quot;token&quot;:&quot;1958900fe7e048ae9b6612d7becab7d0&quot;}" crossorigin="anonymous"></script>
+    
+    </body>
+</HTML>
