@@ -1,4 +1,7 @@
 @font-face {
-  font-family: papyrus;
-  src: url(papyrus.ttf);
+font-family: papyrus;
+src: url(papyrus.ttf);
+}
+p {
+font-family:papyrus;
 }
