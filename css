@@ -1,3 +1,5 @@
+<head>
+<style>
 @font-face {
   font-family:'papyrusfont';
   src: url('papyrus.ttf') format('truetype');
@@ -5,3 +7,5 @@
 p {
   font-family:'papyrusfont';
 }
+</style>
+</head>
