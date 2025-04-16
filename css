@@ -1,7 +1,7 @@
 @font-face {
-font-family: papyrusfont;
+font-family: 'papyrusfont';
 src: url('papyrus.ttf') format('truetype');
 }
 p {
-font-family:papyrusfont;
+font-family:'papyrusfont';
 }
