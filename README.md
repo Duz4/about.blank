@@ -6,3 +6,5 @@ the site can get blocked, but the html can't.
 
 some sites won't work because they're encrypted, like google or youtube, but most of them work. 
 DONT ADD "https://" before the link, it already does that (the code will read it as "https://https://[website].[domain]")
+
+if your SUPER unemployed and cant figure out how to drag and drop a file, then just go to https://aboutblankembedder.netlify.app
